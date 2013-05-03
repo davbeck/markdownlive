@@ -10,8 +10,6 @@
 
 @implementation MLAppDelegate
 
-@synthesize viewMenu = _viewMenu;
-
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
 	if ([NSWindow instancesRespondToSelector:@selector(toggleFullScreen:)]) {
