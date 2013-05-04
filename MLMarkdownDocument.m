@@ -165,6 +165,11 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 	return result;
 }
 
++ (BOOL)autosavesInPlace
+{
+    return YES;
+}
+
 - (NSView *)printableView {
 	NSRect frame = [[self printInfo] imageablePageBounds];
 	frame.size.height = 0;
