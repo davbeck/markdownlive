@@ -6,11 +6,11 @@
 //  Copyright 2011 Aki. All rights reserved.
 //
 
-#import "EditPaneTypesetter.h"
-#import "EditPaneLayoutManager.h"
+#import "MLEditPaneTypesetter.h"
+#import "MLEditPaneLayoutManager.h"
 
 
-@implementation EditPaneTypesetter
+@implementation MLEditPaneTypesetter
 
 - (id)init {
 	if ((self = [super init])) {
@@ -24,7 +24,7 @@
 	
 #pragma unused(inGlyphIndex)
 	
-	EditPaneLayoutManager *theManager = (EditPaneLayoutManager *)[self layoutManager];
+	MLEditPaneLayoutManager *theManager = (MLEditPaneLayoutManager *)[self layoutManager];
 	CGFloat theDefaultLineHeight = [theManager defaultLineHeightForFont:theManager.font];
 	return floor(theDefaultLineHeight - inRect.size.height + 1.5);
 }

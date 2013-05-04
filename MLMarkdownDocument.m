@@ -6,9 +6,9 @@
 	***************************************************************************/
 
 #import "ORCDiscount.h"
-#import "MyDocument.h"
-#import "EditPaneTextView.h"
-#import "NSTextView+EditPlainTextWithUndo.h"
+#import "MLMarkdownDocument.h"
+#import "MLEditPaneTextView.h"
+#import "NSTextView+MLEditPlainTextWithUndo.h"
 #include "discountWrapper.h"
 
 NSString * const	kNumberedListTemplate		= @"%lu. ";
@@ -16,7 +16,7 @@ NSString * const	kNumberedListTemplate		= @"%lu. ";
 NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 
 
-@interface MyDocument ()
+@interface MLMarkdownDocument ()
 
 - (void)_surroundSelectionWithString:(NSString *)string;
 - (void)_surroundSelectionWithPrefixString:(NSString *)prefixString
@@ -29,14 +29,14 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 
 
 // class extension
-@interface MyDocument ()
+@interface MLMarkdownDocument ()
 
 - (void)updateContent;
 - (void)htmlPreviewTimer:(NSTimer*)timer_;
 
 @end
 
-@implementation MyDocument
+@implementation MLMarkdownDocument
 
 - (id)init {
 	self = [super init];
@@ -51,7 +51,7 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(textDidChange:)
-													 name:(__bridge NSString *)(kEditPaneTextViewChangedNotification)
+													 name:kEditPaneTextViewChangedNotification
 												   object:markdownSourceTextView];
 		
 		// print attributes
@@ -69,7 +69,7 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 }
 
 - (NSString *)windowNibName {
-	return @"MyDocument";
+	return @"MLMarkdownDocument";
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)controller_ {

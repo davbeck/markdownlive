@@ -1,5 +1,5 @@
 //
-//  NSTextView+EditPlainTextWithUndo.h
+//  NSTextView+MLEditPlainTextWithUndo.h
 //  MarkdownLive
 //
 //  Created by Jan Weiß on 31.08.12. Some rights reserved: <http://opensource.org/licenses/mit-license.php>
@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSTextView (EditPlainTextWithUndo)
+@interface NSTextView (MLEditPlainTextWithUndo)
 
 - (void)setSelectedRangeWithUndo:(NSRange)range;
 - (void)setSelectedRangesWithUndo:(NSArray *)ranges;

@@ -6,17 +6,17 @@
 //  Copyright 2011 Aki. All rights reserved.
 //
 
-#import "EditPaneLayoutManager.h"
-#import "EditPaneTypesetter.h"
+#import "MLEditPaneLayoutManager.h"
+#import "MLEditPaneTypesetter.h"
 
 
-@implementation EditPaneLayoutManager
+@implementation MLEditPaneLayoutManager
 
 @synthesize font;
 
 - (id)init {
 	if ((self = [super init])) {
-		EditPaneTypesetter *typeSetter = [[EditPaneTypesetter alloc] init];
+		MLEditPaneTypesetter *typeSetter = [[MLEditPaneTypesetter alloc] init];
 		[self setTypesetter:typeSetter];
 		[self setUsesFontLeading:NO];
 	}

@@ -6,7 +6,7 @@
 //  Copyright 2011 Aki. All rights reserved.
 //
 
-#import "PreferencesManager.h"
+#import "MLPreferencesManager.h"
 
 NSString * const	kEditPaneFontName					= @"EditPaneFontName";
 NSString * const	kEditPaneFontSize					= @"EditPaneFontSize";
@@ -15,7 +15,7 @@ NSString * const	kEditPaneBackgroundColor			= @"EditPaneBackgroundColor";
 NSString * const	kEditPaneSelectionColor				= @"EditPaneSelectionColor";
 NSString * const	kEditPaneCaretColor					= @"EditPaneCaretColor";
 
-@interface PreferencesManager (Private)
+@interface MLPreferencesManager (Private)
 
 + (NSColor *)colorForKey:(NSString *)key;
 + (void)setColor:(NSColor *)col forKey:(NSString *)key;
@@ -24,11 +24,11 @@ NSString * const	kEditPaneCaretColor					= @"EditPaneCaretColor";
 @end
 
 
-@implementation PreferencesManager
+@implementation MLPreferencesManager
 
 + (void)initialize {
 	NSMutableDictionary *defVals = [NSMutableDictionary dictionary];
-	[defVals addEntriesFromDictionary:[PreferencesManager editPaneDefaults]];
+	[defVals addEntriesFromDictionary:[MLPreferencesManager editPaneDefaults]];
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defVals];
 }
 
@@ -45,7 +45,7 @@ NSString * const	kEditPaneCaretColor					= @"EditPaneCaretColor";
 
 + (void)resetEditPanePreferences {
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	NSDictionary *defs = [PreferencesManager editPaneDefaults];
+	NSDictionary *defs = [MLPreferencesManager editPaneDefaults];
 	for (NSString *key in defs) {
 		[prefs setObject:[defs objectForKey:key] forKey:key];
 	}
@@ -72,8 +72,8 @@ NSString * const	kEditPaneCaretColor					= @"EditPaneCaretColor";
 }
 
 + (NSFont *)editPaneFont {
-	return [NSFont fontWithName:[PreferencesManager editPaneFontName]
-						   size:[PreferencesManager editPaneFontSize]];
+	return [NSFont fontWithName:[MLPreferencesManager editPaneFontName]
+						   size:[MLPreferencesManager editPaneFontSize]];
 }
 
 + (NSColor *)colorForKey:(NSString *)key {
@@ -95,35 +95,35 @@ NSString * const	kEditPaneCaretColor					= @"EditPaneCaretColor";
 }
 
 + (NSColor *)editPaneForegroundColor {
-	return [PreferencesManager colorForKey:kEditPaneForegroundColor];
+	return [MLPreferencesManager colorForKey:kEditPaneForegroundColor];
 }
 
 + (void)setEditPaneForegroundColor:(NSColor *)value {
-	[PreferencesManager setColor:value forKey:kEditPaneForegroundColor];
+	[MLPreferencesManager setColor:value forKey:kEditPaneForegroundColor];
 }
 
 + (NSColor *)editPaneBackgroundColor {
-	return [PreferencesManager colorForKey:kEditPaneBackgroundColor];
+	return [MLPreferencesManager colorForKey:kEditPaneBackgroundColor];
 }
 
 + (void)setEditPaneBackgroundColor:(NSColor *)value {
-	[PreferencesManager setColor:value forKey:kEditPaneBackgroundColor];
+	[MLPreferencesManager setColor:value forKey:kEditPaneBackgroundColor];
 }
 
 + (NSColor *)editPaneSelectionColor {
-	return [PreferencesManager colorForKey:kEditPaneSelectionColor];
+	return [MLPreferencesManager colorForKey:kEditPaneSelectionColor];
 }
 
 + (void)setEditPaneSelectionColor:(NSColor *)value {
-	[PreferencesManager setColor:value forKey:kEditPaneSelectionColor];
+	[MLPreferencesManager setColor:value forKey:kEditPaneSelectionColor];
 }
 
 + (NSColor *)editPaneCaretColor {
-	return [PreferencesManager colorForKey:kEditPaneCaretColor];
+	return [MLPreferencesManager colorForKey:kEditPaneCaretColor];
 }
 
 + (void)setEditPaneCaretColor:(NSColor *)value {
-	[PreferencesManager setColor:value forKey:kEditPaneCaretColor];
+	[MLPreferencesManager setColor:value forKey:kEditPaneCaretColor];
 }
 
 @end

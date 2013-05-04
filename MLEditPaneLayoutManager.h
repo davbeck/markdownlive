@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface EditPaneLayoutManager : NSLayoutManager {
+@interface MLEditPaneLayoutManager : NSLayoutManager {
 	NSFont *font;
 }
 

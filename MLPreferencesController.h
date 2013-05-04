@@ -10,7 +10,7 @@
 
 extern NSString * const kEditPaneFontNameChangedNotification;
 
-@interface PreferencesController : NSObject {
+@interface MLPreferencesController : NSObject {
 	IBOutlet NSWindow *prefWindow;
 	IBOutlet NSTextField *fontPreviewField;
 }

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		11EF12E0142D24BB0086C77F /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EF12DF142D24BB0086C77F /* MLAppDelegate.m */; };
-		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
+		1DDD582C0DA1D0D100B32029 /* MLMarkdownDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MLMarkdownDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
-		3D6A8BBC15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A8BBB15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.m */; };
+		3D6A8BBC15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A8BBB15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.m */; };
 		3D6A8BE115F0F33C002C8B62 /* Ordered List Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6A8BDC15F0F33C002C8B62 /* Ordered List Template.pdf */; };
 		3D6A8BE215F0F33C002C8B62 /* Quote Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6A8BDD15F0F33C002C8B62 /* Quote Template.pdf */; };
 		3D6A8BE315F0F33C002C8B62 /* Unordered List Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6A8BDE15F0F33C002C8B62 /* Unordered List Template.pdf */; };
@@ -20,7 +20,7 @@
 		795F6CCD105D741100D1F90A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795F6CCC105D741100D1F90A /* WebKit.framework */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
-		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC310486D014006FF6A4 /* MLMarkdownDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MLMarkdownDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		ABE8DDF913CA38B5005852B5 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 226936E612E7CDC500171322 /* styles.css */; };
@@ -45,11 +45,11 @@
 		ABECD96B13C8D2D200B77CFD /* markdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 22ECEED912E7C2E8003B50DC /* markdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABECD98D13C8D6A900B77CFD /* ORCDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = ABECD98C13C8D6A900B77CFD /* ORCDiscount.m */; };
 		ABECD9ED13C8DC2B00B77CFD /* ORCDiscount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABECD8C213C8B8CA00B77CFD /* ORCDiscount.framework */; };
-		ABF75D7313CDEBBB00B5E7AB /* EditPaneLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D6E13CDEBBA00B5E7AB /* EditPaneLayoutManager.m */; };
-		ABF75D7413CDEBBB00B5E7AB /* EditPaneTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D6F13CDEBBA00B5E7AB /* EditPaneTextView.m */; };
-		ABF75D7513CDEBBB00B5E7AB /* EditPaneTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7013CDEBBA00B5E7AB /* EditPaneTypesetter.m */; };
-		ABF75D7613CDEBBB00B5E7AB /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7113CDEBBA00B5E7AB /* PreferencesController.m */; };
-		ABF75D7713CDEBBB00B5E7AB /* PreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7213CDEBBA00B5E7AB /* PreferencesManager.m */; };
+		ABF75D7313CDEBBB00B5E7AB /* MLEditPaneLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D6E13CDEBBA00B5E7AB /* MLEditPaneLayoutManager.m */; };
+		ABF75D7413CDEBBB00B5E7AB /* MLEditPaneTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D6F13CDEBBA00B5E7AB /* MLEditPaneTextView.m */; };
+		ABF75D7513CDEBBB00B5E7AB /* MLEditPaneTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7013CDEBBA00B5E7AB /* MLEditPaneTypesetter.m */; };
+		ABF75D7613CDEBBB00B5E7AB /* MLPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7113CDEBBA00B5E7AB /* MLPreferencesController.m */; };
+		ABF75D7713CDEBBB00B5E7AB /* MLPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF75D7213CDEBBA00B5E7AB /* MLPreferencesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		11EF12DE142D24BB0086C77F /* MLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
 		11EF12DF142D24BB0086C77F /* MLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MLMarkdownDocument.xib; sourceTree = "<group>"; };
 		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2269367E12E7C53000171322 /* emmatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = emmatch.c; sourceTree = "<group>"; };
 		2269369A12E7C6AB00171322 /* html5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html5.c; sourceTree = "<group>"; };
@@ -94,24 +94,24 @@
 		22ECEEC612E7C258003B50DC /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		22ECEED912E7C2E8003B50DC /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = markdown.h; sourceTree = "<group>"; };
 		2564AD2C0F5327BB00F57823 /* MarkdownLive_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkdownLive_Prefix.pch; sourceTree = "<group>"; };
-		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
-		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MLMarkdownDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMarkdownDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MLMarkdownDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMarkdownDocument.h; sourceTree = "<group>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		3D6A8BBA15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+EditPlainTextWithUndo.h"; sourceTree = "<group>"; };
-		3D6A8BBB15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+EditPlainTextWithUndo.m"; sourceTree = "<group>"; };
+		3D6A8BBA15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+MLEditPlainTextWithUndo.h"; sourceTree = "<group>"; };
+		3D6A8BBB15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+MLEditPlainTextWithUndo.m"; sourceTree = "<group>"; };
 		3D6A8BDC15F0F33C002C8B62 /* Ordered List Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Ordered List Template.pdf"; sourceTree = "<group>"; };
 		3D6A8BDD15F0F33C002C8B62 /* Quote Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Quote Template.pdf"; sourceTree = "<group>"; };
 		3D6A8BDE15F0F33C002C8B62 /* Unordered List Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Unordered List Template.pdf"; sourceTree = "<group>"; };
 		3D8BA23115F160FD000555C7 /* Image Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Image Template.pdf"; sourceTree = "<group>"; };
 		3D8BA23215F160FD000555C7 /* Link Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Link Template.pdf"; sourceTree = "<group>"; };
-		3DD161871431FCED0003F6C7 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
-		3DD161881431FCF40003F6C7 /* EditPaneTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPaneTypesetter.h; sourceTree = "<group>"; };
-		3DD161891431FCFC0003F6C7 /* EditPaneTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPaneTextView.h; sourceTree = "<group>"; };
-		3DD1618A1431FD030003F6C7 /* EditPaneLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPaneLayoutManager.h; sourceTree = "<group>"; };
-		3DD1618B1431FD0B0003F6C7 /* PreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesManager.h; sourceTree = "<group>"; };
+		3DD161871431FCED0003F6C7 /* MLPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPreferencesController.h; sourceTree = "<group>"; };
+		3DD161881431FCF40003F6C7 /* MLEditPaneTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditPaneTypesetter.h; sourceTree = "<group>"; };
+		3DD161891431FCFC0003F6C7 /* MLEditPaneTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditPaneTextView.h; sourceTree = "<group>"; };
+		3DD1618A1431FD030003F6C7 /* MLEditPaneLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEditPaneLayoutManager.h; sourceTree = "<group>"; };
+		3DD1618B1431FD0B0003F6C7 /* MLPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPreferencesManager.h; sourceTree = "<group>"; };
 		795F6C4E105D6EC400D1F90A /* mkdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mkdio.c; sourceTree = "<group>"; };
 		795F6C50105D6ECE00D1F90A /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = markdown.c; sourceTree = "<group>"; };
 		795F6C52105D6ED800D1F90A /* generate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = generate.c; sourceTree = "<group>"; };
@@ -133,11 +133,11 @@
 		ABECD8C313C8B8CA00B77CFD /* ORCDiscount-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORCDiscount-Info.plist"; sourceTree = "<group>"; };
 		ABECD95B13C8D14C00B77CFD /* ORCDiscount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORCDiscount.h; path = ORCDiscount/ORCDiscount.h; sourceTree = "<group>"; };
 		ABECD98C13C8D6A900B77CFD /* ORCDiscount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORCDiscount.m; path = ORCDiscount/ORCDiscount.m; sourceTree = "<group>"; };
-		ABF75D6E13CDEBBA00B5E7AB /* EditPaneLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPaneLayoutManager.m; sourceTree = "<group>"; };
-		ABF75D6F13CDEBBA00B5E7AB /* EditPaneTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPaneTextView.m; sourceTree = "<group>"; };
-		ABF75D7013CDEBBA00B5E7AB /* EditPaneTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPaneTypesetter.m; sourceTree = "<group>"; };
-		ABF75D7113CDEBBA00B5E7AB /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
-		ABF75D7213CDEBBA00B5E7AB /* PreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesManager.m; sourceTree = "<group>"; };
+		ABF75D6E13CDEBBA00B5E7AB /* MLEditPaneLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditPaneLayoutManager.m; sourceTree = "<group>"; };
+		ABF75D6F13CDEBBA00B5E7AB /* MLEditPaneTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditPaneTextView.m; sourceTree = "<group>"; };
+		ABF75D7013CDEBBA00B5E7AB /* MLEditPaneTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEditPaneTypesetter.m; sourceTree = "<group>"; };
+		ABF75D7113CDEBBA00B5E7AB /* MLPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesController.m; sourceTree = "<group>"; };
+		ABF75D7213CDEBBA00B5E7AB /* MLPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPreferencesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,18 +222,18 @@
 			children = (
 				11EF12DE142D24BB0086C77F /* MLAppDelegate.h */,
 				11EF12DF142D24BB0086C77F /* MLAppDelegate.m */,
-				3DD1618A1431FD030003F6C7 /* EditPaneLayoutManager.h */,
-				ABF75D6E13CDEBBA00B5E7AB /* EditPaneLayoutManager.m */,
-				3DD161891431FCFC0003F6C7 /* EditPaneTextView.h */,
-				ABF75D6F13CDEBBA00B5E7AB /* EditPaneTextView.m */,
-				3DD161881431FCF40003F6C7 /* EditPaneTypesetter.h */,
-				ABF75D7013CDEBBA00B5E7AB /* EditPaneTypesetter.m */,
-				3DD161871431FCED0003F6C7 /* PreferencesController.h */,
-				ABF75D7113CDEBBA00B5E7AB /* PreferencesController.m */,
-				3DD1618B1431FD0B0003F6C7 /* PreferencesManager.h */,
-				ABF75D7213CDEBBA00B5E7AB /* PreferencesManager.m */,
-				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
-				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				3DD1618A1431FD030003F6C7 /* MLEditPaneLayoutManager.h */,
+				ABF75D6E13CDEBBA00B5E7AB /* MLEditPaneLayoutManager.m */,
+				3DD161891431FCFC0003F6C7 /* MLEditPaneTextView.h */,
+				ABF75D6F13CDEBBA00B5E7AB /* MLEditPaneTextView.m */,
+				3DD161881431FCF40003F6C7 /* MLEditPaneTypesetter.h */,
+				ABF75D7013CDEBBA00B5E7AB /* MLEditPaneTypesetter.m */,
+				3DD161871431FCED0003F6C7 /* MLPreferencesController.h */,
+				ABF75D7113CDEBBA00B5E7AB /* MLPreferencesController.m */,
+				3DD1618B1431FD0B0003F6C7 /* MLPreferencesManager.h */,
+				ABF75D7213CDEBBA00B5E7AB /* MLPreferencesManager.m */,
+				2A37F4AEFDCFA73011CA2CEA /* MLMarkdownDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MLMarkdownDocument.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* MarkdownLive-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
-				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
+				1DDD58280DA1D0D100B32029 /* MLMarkdownDocument.xib */,
 				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -274,8 +274,8 @@
 		3D6A8BBD15F0D919002C8B62 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				3D6A8BBA15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.h */,
-				3D6A8BBB15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.m */,
+				3D6A8BBA15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.h */,
+				3D6A8BBB15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -395,6 +395,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ML;
 				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MarkdownLive" */;
@@ -424,7 +425,7 @@
 			files = (
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
-				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
+				1DDD582C0DA1D0D100B32029 /* MLMarkdownDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				795F6C87105D70A300D1F90A /* MarkdownLiveApp.icns in Resources */,
 				3D6A8BE115F0F33C002C8B62 /* Ordered List Template.pdf in Resources */,
@@ -450,15 +451,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
+				8D15AC310486D014006FF6A4 /* MLMarkdownDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
-				ABF75D7313CDEBBB00B5E7AB /* EditPaneLayoutManager.m in Sources */,
-				ABF75D7413CDEBBB00B5E7AB /* EditPaneTextView.m in Sources */,
-				ABF75D7513CDEBBB00B5E7AB /* EditPaneTypesetter.m in Sources */,
-				ABF75D7613CDEBBB00B5E7AB /* PreferencesController.m in Sources */,
-				ABF75D7713CDEBBB00B5E7AB /* PreferencesManager.m in Sources */,
+				ABF75D7313CDEBBB00B5E7AB /* MLEditPaneLayoutManager.m in Sources */,
+				ABF75D7413CDEBBB00B5E7AB /* MLEditPaneTextView.m in Sources */,
+				ABF75D7513CDEBBB00B5E7AB /* MLEditPaneTypesetter.m in Sources */,
+				ABF75D7613CDEBBB00B5E7AB /* MLPreferencesController.m in Sources */,
+				ABF75D7713CDEBBB00B5E7AB /* MLPreferencesManager.m in Sources */,
 				11EF12E0142D24BB0086C77F /* MLAppDelegate.m in Sources */,
-				3D6A8BBC15F0D914002C8B62 /* NSTextView+EditPlainTextWithUndo.m in Sources */,
+				3D6A8BBC15F0D914002C8B62 /* NSTextView+MLEditPlainTextWithUndo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +503,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1DDD58280DA1D0D100B32029 /* MyDocument.xib */ = {
+		1DDD58280DA1D0D100B32029 /* MLMarkdownDocument.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58290DA1D0D100B32029 /* English */,
 			);
-			name = MyDocument.xib;
+			name = MLMarkdownDocument.xib;
 			sourceTree = "<group>";
 		};
 		1DDD582A0DA1D0D100B32029 /* MainMenu.xib */ = {

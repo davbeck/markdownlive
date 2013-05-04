@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-extern void *kEditPaneTextViewChangedNotification;
+extern NSString * const kEditPaneTextViewChangedNotification;
 
-@class EditPaneLayoutManager;
+@class MLEditPaneLayoutManager;
 
-@interface EditPaneTextView : NSTextView {
-	EditPaneLayoutManager *layoutMan;
+@interface MLEditPaneTextView : NSTextView {
+	MLEditPaneLayoutManager *layoutMan;
 }
 
 - (void)updateColors;

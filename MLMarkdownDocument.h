@@ -8,11 +8,11 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@class EditPaneTextView;
-@class EditPaneLayoutManager;
+@class MLEditPaneTextView;
+@class MLEditPaneLayoutManager;
 
-@interface MyDocument : NSDocument {
-	IBOutlet	EditPaneTextView			*markdownSourceTextView;
+@interface MLMarkdownDocument : NSDocument {
+	IBOutlet	MLEditPaneTextView			*markdownSourceTextView;
 	IBOutlet	WebView						*htmlPreviewWebView;
 	
 				NSTextStorage				*markdownSource;

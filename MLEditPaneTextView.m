@@ -6,15 +6,15 @@
 //  Copyright 2011 Aki. All rights reserved.
 //
 
-#import "EditPaneTextView.h"
-#import "EditPaneLayoutManager.h"
-#import "PreferencesManager.h"
-#import "PreferencesController.h"
+#import "MLEditPaneTextView.h"
+#import "MLEditPaneLayoutManager.h"
+#import "MLPreferencesManager.h"
+#import "MLPreferencesController.h"
 
-void *kEditPaneTextViewChangedNotification = &kEditPaneTextViewChangedNotification;
+NSString * const	kEditPaneTextViewChangedNotification		= @"EditPaneTextViewChangedNotification";
 void *kEditPaneColorChangedNotification = &kEditPaneColorChangedNotification;
 
-@implementation EditPaneTextView
+@implementation MLEditPaneTextView
 
 - (void)awakeFromNib {
 	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -46,7 +46,7 @@ void *kEditPaneColorChangedNotification = &kEditPaneColorChangedNotification;
 	NSTextContainer *textContainer = [[NSTextContainer alloc] init];
 	[textContainer setContainerSize:[[self textContainer] containerSize]];
 	[textContainer setWidthTracksTextView:YES];
-	layoutMan = [[EditPaneLayoutManager alloc] init];
+	layoutMan = [[MLEditPaneLayoutManager alloc] init];
 	[self replaceTextContainer:textContainer];
 	[textContainer replaceLayoutManager:layoutMan];
 }
@@ -58,7 +58,7 @@ void *kEditPaneColorChangedNotification = &kEditPaneColorChangedNotification;
 
 - (void)keyDown:(NSEvent *)aEvent {
 	[super keyDown:aEvent];
-	[[NSNotificationCenter defaultCenter] postNotificationName:(__bridge NSString *)(kEditPaneTextViewChangedNotification)
+	[[NSNotificationCenter defaultCenter] postNotificationName:kEditPaneTextViewChangedNotification
 														object:self];
 }
 
@@ -70,7 +70,7 @@ void *kEditPaneColorChangedNotification = &kEditPaneColorChangedNotification;
 		selectedRange = NSMakeRange(0, [resultString length]);
 		NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
 							   [NSNumber numberWithInt:NSUnderlineStyleSingle], NSUnderlineStyleAttributeName,
-							   [PreferencesManager editPaneForegroundColor], NSUnderlineColorAttributeName,
+							   [MLPreferencesManager editPaneForegroundColor], NSUnderlineColorAttributeName,
 							   nil];
 		[resultString setAttributes:attrs range:selectedRange];
 	} else {
@@ -82,16 +82,16 @@ void *kEditPaneColorChangedNotification = &kEditPaneColorChangedNotification;
 }
 
 - (void)updateColors {
-	[[self enclosingScrollView] setBackgroundColor:[PreferencesManager editPaneBackgroundColor]];
-	[self setTextColor:[PreferencesManager editPaneForegroundColor]];
-	[self setInsertionPointColor:[PreferencesManager editPaneCaretColor]];
-	NSDictionary *selectedAttr = [NSDictionary dictionaryWithObject:[PreferencesManager editPaneSelectionColor]
+	[[self enclosingScrollView] setBackgroundColor:[MLPreferencesManager editPaneBackgroundColor]];
+	[self setTextColor:[MLPreferencesManager editPaneForegroundColor]];
+	[self setInsertionPointColor:[MLPreferencesManager editPaneCaretColor]];
+	NSDictionary *selectedAttr = [NSDictionary dictionaryWithObject:[MLPreferencesManager editPaneSelectionColor]
 															 forKey:NSBackgroundColorAttributeName];
 	[self setSelectedTextAttributes:selectedAttr];
 }
 
 - (void)updateFont {
-	layoutMan.font = [PreferencesManager editPaneFont];
+	layoutMan.font = [MLPreferencesManager editPaneFont];
 	[self setFont:layoutMan.font];
 }
 

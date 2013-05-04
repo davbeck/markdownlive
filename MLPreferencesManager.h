@@ -15,7 +15,7 @@ extern NSString * const kEditPaneBackgroundColor;
 extern NSString * const kEditPaneSelectionColor;
 extern NSString * const kEditPaneCaretColor;
 
-@interface PreferencesManager : NSObject {
+@interface MLPreferencesManager : NSObject {
 
 }
 

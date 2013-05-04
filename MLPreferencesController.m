@@ -6,20 +6,20 @@
 //  Copyright 2011 Aki. All rights reserved.
 //
 
-#import "PreferencesController.h"
-#import "PreferencesManager.h"
+#import "MLPreferencesController.h"
+#import "MLPreferencesManager.h"
 
 NSString * const	kEditPaneFontNameChangedNotification		= @"EditPaneFontNameChangedNotification";
 
 NSString * const	kFontDisplayFormat							= @"%@ %g pt.";
 
-@interface PreferencesController (Private)
+@interface MLPreferencesController (Private)
 
 - (void)updateFontDisplay;
 
 @end
 
-@implementation PreferencesController
+@implementation MLPreferencesController
 
 - (void)awakeFromNib {
 	[self updateFontDisplay];
@@ -27,15 +27,15 @@ NSString * const	kFontDisplayFormat							= @"%@ %g pt.";
 
 - (IBAction)showFonts:(id)sender {
 	NSFontManager *fontMan = [NSFontManager sharedFontManager];
-	NSFont *currentFont = [PreferencesManager editPaneFont];
+	NSFont *currentFont = [MLPreferencesManager editPaneFont];
 	[prefWindow makeFirstResponder:prefWindow];
 	[fontMan setSelectedFont:currentFont isMultiple:NO];
 	[fontMan orderFrontFontPanel:sender];
 }
 
 - (void)updateFontDisplay {
-	NSString *fontName = [PreferencesManager editPaneFontName];
-	float fontSize = [PreferencesManager editPaneFontSize];
+	NSString *fontName = [MLPreferencesManager editPaneFontName];
+	float fontSize = [MLPreferencesManager editPaneFontSize];
 	[fontPreviewField setStringValue:[NSString stringWithFormat:kFontDisplayFormat, fontName, fontSize]];
 }
 
@@ -43,7 +43,7 @@ NSString * const	kFontDisplayFormat							= @"%@ %g pt.";
 	
 #pragma unused(sender)
 	
-	[PreferencesManager resetEditPanePreferences];
+	[MLPreferencesManager resetEditPanePreferences];
 	[self updateFontDisplay];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kEditPaneFontNameChangedNotification
 														object:nil];
@@ -55,8 +55,8 @@ NSString * const	kFontDisplayFormat							= @"%@ %g pt.";
 	float fontSize = [newFont pointSize];
 	
 	if (newFont && fontName) {
-		[PreferencesManager setEditPaneFontName:fontName];
-		[PreferencesManager setEditPaneFontSize:fontSize];
+		[MLPreferencesManager setEditPaneFontName:fontName];
+		[MLPreferencesManager setEditPaneFontSize:fontSize];
 		[fontPreviewField setStringValue:[NSString stringWithFormat:kFontDisplayFormat, fontName, fontSize]];
 		
 		[[NSNotificationCenter defaultCenter] postNotificationName:kEditPaneFontNameChangedNotification
